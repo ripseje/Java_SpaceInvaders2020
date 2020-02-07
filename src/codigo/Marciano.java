@@ -16,6 +16,8 @@ public class Marciano {
     
     public Image imagen1 = null;
     public Image imagen2 = null;
+    public int posX = 10;
+    public int posY = 10;
     private int anchoPantalla;
     public int vida = 50;
     public Marciano(int _anchoPantalla){
@@ -25,6 +27,15 @@ public class Marciano {
             imagen2 = ImageIO.read(getClass().getResource("/imagenes/marcianito2.png"));
         } catch (Exception e) {
             
+        }
+    }
+    
+    public void mueve(boolean direccion){
+        if(direccion){
+            posX++;
+        }
+        else{
+            posX--;
         }
     }
     
