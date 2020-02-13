@@ -10,33 +10,30 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author Sergio Vilches
+ * @author Angel Esquinas
  */
 public class Marciano {
-    
-    public Image imagen1 = null;
+
+    public Image imagen1 = null;//creo imagenes
     public Image imagen2 = null;
-    public int posX = 10;
-    public int posY = 10;
+
+    public int posX = 0;
+    public int posY = 0;
+
     private int anchoPantalla;
+
     public int vida = 50;
-    public Marciano(int _anchoPantalla){
+
+    public Marciano(int _anchoPantalla) {
         anchoPantalla = _anchoPantalla;
-        try {
-            imagen1 = ImageIO.read(getClass().getResource("/imagenes/marcianito1.png"));
-            imagen2 = ImageIO.read(getClass().getResource("/imagenes/marcianito2.png"));
-        } catch (Exception e) {
-            
-        }
     }
-    
-    public void mueve(boolean direccion){
-        if(direccion){
+
+    //método para mover a la nave 
+    public void mueve(boolean direccion) {
+        if (direccion) {
             posX++;
-        }
-        else{
+        } else {
             posX--;
         }
     }
-    
 }

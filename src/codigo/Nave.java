@@ -6,10 +6,9 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author Sergio Vilches
+ * @author Jorge Cisneros
  */
 public class Nave {
-    
     Image imagen = null;
     public int posX = 0;
     public int posY = 0;
@@ -17,21 +16,19 @@ public class Nave {
     private boolean pulsadoIzquierda = false;
     private boolean pulsadoDerecha = false;
     
+    
     public Nave(){
-        try {
-            imagen = ImageIO.read(getClass().getResource("/imagenes/nave.png"));
-        } catch (Exception e) {
-            
-        }
+
     }
     
     public void mueve(){
-        if (pulsadoIzquierda && posX > 0){
+        if (pulsadoIzquierda && posX >0){
             posX -= 3;
-        } 
-        if(pulsadoDerecha && posX < VentanaJuego.ANCHOPANTALLA - imagen.getWidth(null)){
-            posX += 3;
         }
+        if (pulsadoDerecha && posX 
+                < VentanaJuego.ANCHOPANTALLA - imagen.getWidth(null)){
+            posX += 3 ;
+        }      
     }
 
     public boolean isPulsadoIzquierda() {
@@ -52,4 +49,10 @@ public class Nave {
         this.pulsadoIzquierda = false;
     }
     
+    
+    
 }
+
+
+
+
