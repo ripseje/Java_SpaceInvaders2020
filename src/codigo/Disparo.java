@@ -24,14 +24,14 @@ public class Disparo {
             try{
                 imagen=ImageIO.read(getClass().getResource("/imagenes/disparo.png"));
                 sonidoDisparo = AudioSystem.getClip();
-                sonidoDisparo.open(AudioSystem.getAudioInputStream(getClass().getResource("/sonidos/laser.wav")));
+                sonidoDisparo.open(AudioSystem.getAudioInputStream(getClass().getResource("/sonidos/kaching.wav")));
             }
             catch(Exception e){
             }
     }
     
     public void mueve(){
-         posY -= 5;
+         posY -= 4;
             
     }
 

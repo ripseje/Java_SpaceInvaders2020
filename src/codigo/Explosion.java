@@ -25,7 +25,7 @@ public class Explosion {
     public Explosion(){
         try {
             sonidoExplosion = AudioSystem.getClip();
-            sonidoExplosion.open(AudioSystem.getAudioInputStream(getClass().getResource("/sonidos/explosion.wav")));
+            sonidoExplosion.open(AudioSystem.getAudioInputStream(getClass().getResource("/sonidos/explo.wav")));
            
         } catch (UnsupportedAudioFileException ex) {
         } catch (IOException ex) { 
